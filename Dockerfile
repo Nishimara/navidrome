@@ -130,6 +130,8 @@ LABEL org.opencontainers.image.source="https://github.com/navidrome/navidrome"
 # Install ffmpeg and mpv
 RUN apk add -U --no-cache ffmpeg mpv sqlite
 
+RUN apk add -U --no-cache tzdata
+
 # Copy navidrome binary
 COPY --from=build /out/navidrome /app/
 
